@@ -1,0 +1,15 @@
+# Local development configuration (Ollama + pyttsx3).
+
+ai:
+  provider: "ollama"
+  ollama:
+    base_url: "http://localhost:11434/v1"
+    model: "llama3.2"
+    max_tokens: 8192
+
+tts:
+  provider: "local"
+  local:
+    rate: 150
+    volume: 1.0
+    voice_id: null

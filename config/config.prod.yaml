@@ -1,0 +1,113 @@
+# Contents Auto-Uploader Configuration
+
+# AI Service Settings
+ai:
+  # Provider: claude, openai, or ollama
+  provider: "claude"
+
+  # Claude settings
+  claude:
+    model: "claude-sonnet-4-20250514"
+    max_tokens: 8192
+
+  # OpenAI settings
+  openai:
+    model: "gpt-4o"
+    max_tokens: 8192
+
+  # Ollama settings (local development)
+  ollama:
+    base_url: "http://localhost:11434/v1"
+    model: "llama3.2"
+    max_tokens: 8192
+
+# Script Generation Settings
+script:
+  # Default duration in minutes
+  default_duration: 10
+  # Default tone/style
+  default_tone: "친근하고 설득력 있는"
+  # Language
+  language: "ko"
+
+# Presentation Settings
+presentation:
+  # Slide dimensions (16:9 aspect ratio)
+  width: 1920
+  height: 1080
+  # Font settings
+  title_font_size: 44
+  body_font_size: 28
+  # Colors (hex)
+  background_color: "#FFFFFF"
+  title_color: "#1a1a2e"
+  body_color: "#333333"
+  accent_color: "#4a90d9"
+
+# TTS Settings
+tts:
+  # Provider: elevenlabs, google, openai, or local
+  provider: "openai"
+
+  # ElevenLabs settings
+  elevenlabs:
+    voice_id: "pNInz6obpgDQGcFmaJgB"  # Adam
+    model_id: "eleven_multilingual_v2"
+    stability: 0.5
+    similarity_boost: 0.75
+
+  # Google Cloud TTS settings
+  google:
+    language_code: "ko-KR"
+    voice_name: "ko-KR-Neural2-C"
+    speaking_rate: 1.0
+    pitch: 0.0
+
+  # OpenAI TTS settings
+  openai:
+    model: "tts-1-hd"
+    voice: "alloy"  # alloy, echo, fable, onyx, nova, shimmer
+    speed: 1.0
+
+  # Local TTS settings (pyttsx3)
+  local:
+    rate: 150
+    volume: 1.0
+    voice_id: null
+
+# Video Settings
+video:
+  # Output format
+  format: "mp4"
+  # Resolution
+  width: 1920
+  height: 1080
+  # Frame rate
+  fps: 30
+  # Codec
+  codec: "libx264"
+  # Audio codec
+  audio_codec: "aac"
+  # Bitrate
+  bitrate: "8000k"
+  # Transition duration in seconds
+  transition_duration: 0.5
+
+# YouTube Settings
+youtube:
+  # Default privacy status: public, private, or unlisted
+  privacy_status: "private"
+  # Category ID (22 = People & Blogs, 27 = Education, 28 = Science & Technology)
+  category_id: "27"
+  # Default tags
+  default_tags:
+    - "교육"
+    - "강의"
+    - "자기계발"
+
+# Output Settings
+output:
+  # Base output directory
+  base_dir: "output"
+  # Keep intermediate files
+  keep_intermediate: true
